@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <!-- Breadcrumbs -->
+        <h1 class="hero-heading mb-0"></h1>
+        <p class="text-muted mb-5">Gérer votre compte</p>
+        <div class="row">
+            <div class="col-6 col-md-4 mb-30px">
+                <div class="card h-100 border-0 shadow hover-animate">
+                    <div class="card-body">
+                        <div class="icon-rounded bg-success-light mb-3">
+                            <svg class="svg-icon text-success w-2rem h-2rem">
+                                <use xlink:href="#identity-1"> </use>
+                            </svg>
+                        </div>
+                        <h5 class="card-title mb-3">
+                            <a class="text-decoration-none text-dark stretched-link" href="{% url 'profile-update' %}">
+                                Modifier mon compte
+                            </a>
+                        </h5>
+                        <p class="text-muted card-text text-sm">Mettre à jour mes informations</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-30px">
+                <div class="card h-100 border-0 shadow hover-animate">
+                    <div class="card-body">
+                        <div class="icon-rounded bg-success-light mb-3">
+                            <svg class="svg-icon text-success w-2rem h-2rem">
+                                <use xlink:href="#password-1"> </use>
+                            </svg>
+                        </div>
+                        <h5 class="card-title mb-3"><a class="text-decoration-none text-dark stretched-link" href="#">Nous contacter</a></h5>
+                        <p class="text-muted card-text text-sm">Vous avez une question ?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-30px">
+                <div class="card h-100 border-0 shadow hover-animate">
+                    <div class="card-body">
+                        <div class="icon-rounded bg-success-light mb-3">
+                            <svg class="svg-icon text-success w-2rem h-2rem">
+                                <use xlink:href="#pay-by-card-1"> </use>
+                            </svg>
+                        </div>
+                        <h5 class="card-title mb-3"><a class="text-decoration-none text-dark stretched-link" href="{% url 'user-profile' user.profile.id %}">Mon Profil</a></h5>
+                        <p class="text-muted card-text text-sm">Consulter mon profil</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-30px">
+                <div class="card h-100 border-0 shadow hover-animate">
+                    <div class="card-body">
+                        <div class="icon-rounded bg-success-light mb-3">
+                            <svg class="svg-icon text-success w-2rem h-2rem">
+                                <use xlink:href="#chat-app-1"> </use>
+                            </svg>
+                        </div>
+                        <h5 class="card-title mb-3"><a class="text-decoration-none text-dark stretched-link" href="{% url 'inbox' %}">Messages</a></h5>
+                        <p class="text-muted card-text text-sm">Consulter vos messages</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-30px">
+                <div class="card h-100 border-0 shadow hover-animate">
+                    <div class="card-body">
+                        <div class="icon-rounded bg-success-light mb-3">
+                            <svg class="svg-icon text-success w-2rem h-2rem">
+                                <use xlink:href="#diary-1"> </use>
+                            </svg>
+                        </div>
+                        <h5 class="card-title mb-3"><a class="text-decoration-none text-dark stretched-link" href="{% url 'my-favorite' %}">Mes articles favoris</a></h5>
+                        <p class="text-muted card-text text-sm">Consulter mes favoris</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-30px">
+                <div class="card h-100 border-0 shadow hover-animate">
+                    <div class="card-body">
+                        <div class="icon-rounded bg-success-light mb-3">
+                            <svg class="svg-icon text-success w-2rem h-2rem">
+                                <use xlink:href="#mix-1"> </use>
+                            </svg>
+                        </div>
+                        <h5 class="card-title mb-3"><a class="text-decoration-none text-dark stretched-link" href="#">Gérer mes articles</a></h5>
+                        <p class="text-muted card-text text-sm">Voir, modifier ou supprimer mes annonces</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

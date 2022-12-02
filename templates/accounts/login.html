@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="my-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <div class="card">
+                    <div class="card-body">
+                        <form class="form-validate" method="POST">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label class="form-label" for="loginUsername"> Email</label>
+                                <input class="form-control" name="email" id="loginUsername" type="email" placeholder="Email" autocomplete="off" required data-msg="Please enter your email">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="loginPassword"> Mot de passe</label>
+                                <input class="form-control" name="password" id="loginPassword" placeholder="Mot de passe" type="password" required data-msg="Mot de passe obligaoire">
+                            </div>
+                            <button class="btn btn-lg btn-block btn-dark" type="submit">Connexion</button>
+                        </form>
+                        <hr class="my-4">
+                        <p class="text-center">
+                            <small class="text-muted text-center">Vous n'avez pas de compte ?
+                                <a href="{% url 'register' %}" class="text-dark">Inscrption</a>
+                            </small>
+                        </p>
+                        <p class="text-center">
+                            <small class="text-muted text-center">
+                                <a href="{% url 'password_reset' %}" class="text-dark">Mot de passe oublié ?</a>
+                            </small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

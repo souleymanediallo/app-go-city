@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="my-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <div class="card">
+                    <div class="card-body">
+                        <form class="form-validate" method="POST">
+                            {% csrf_token %}
+                            {% for field in form %}
+                            <div class="form-group">
+                                <label class="form-label" for="loginUsername"> {{ field.label }}</label>
+                                {{ field }}
+                                {% for error in field.errors %}
+                                <p style="color: red;">{{error}}</p>
+                                {% endfor %}
+                            </div>
+                            {% endfor %}
+                            <button class="btn btn-lg btn-block btn-dark" type="submit">Inscription</button>
+                            <hr class="my-4">
+                            <p class="text-center">
+                                <small class="text-muted text-center">Vous avez déjà un compte ?
+                                    <a href="{% url 'login' %}" class="text-dark">Connexion</a>
+                                </small>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
